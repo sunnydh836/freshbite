@@ -1,0 +1,264 @@
+.food-hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 28px clamp(20px, 5vw, 64px) 40px;
+}
+
+/* ---------- Nav ---------- */
+
+.food-hero-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  z-index: 5;
+}
+
+.food-hero-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  font-size: 1rem;
+}
+
+.food-hero-logo-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.food-hero-menu {
+  display: flex;
+  gap: 36px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.92;
+}
+
+.food-hero-menu li {
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.food-hero-menu li:hover {
+  opacity: 0.65;
+}
+
+.food-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.food-hero-icon-btn {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.16);
+  color: inherit;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.food-hero-icon-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.food-hero-cart-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 50%;
+  background: #e12a2a;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Stage ---------- */
+
+.food-hero-stage {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 560px;
+}
+
+.food-hero-bgtext {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(5rem, 16vw, 13rem);
+  line-height: 1;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: -0.02em;
+  user-select: none;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.food-hero-image-wrap {
+  position: relative;
+  z-index: 2;
+  width: min(874px, 94vw);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.food-hero-image {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.35));
+  will-change: transform, opacity;
+}
+
+/* ---------- Footer content ---------- */
+
+.food-hero-footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.food-hero-desc {
+  max-width: 220px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.55;
+  opacity: 0.92;
+  will-change: transform, opacity;
+}
+
+.food-hero-order {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 30px;
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  background: #000;
+  color: #fff;
+  transform: translateX(-30%);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.food-hero-order:hover {
+  transform: translateX(-30%) translateY(-3px);
+}
+
+.food-hero-nav-btns {
+  display: flex;
+  gap: 12px;
+}
+
+.food-hero-nav-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1.5px solid currentColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: inherit;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.food-hero-nav-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
+}
+
+/* ---------- Dots ---------- */
+
+.food-hero-dots {
+  position: absolute;
+  right: clamp(20px, 5vw, 64px);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.food-hero-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.food-hero-dot--active {
+  background: rgba(255, 255, 255, 0.95);
+  transform: scale(1.3);
+}
+
+.food-hero-social {
+  position: absolute;
+  left: clamp(20px, 5vw, 64px);
+  bottom: 40px;
+  z-index: 5;
+  display: none;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 860px) {
+  .food-hero-menu {
+    display: none;
+  }
+
+  .food-hero-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .food-hero-nav-btns {
+    align-self: flex-end;
+  }
+
+  .food-hero-image-wrap {
+    width: min(624px, 98vw);
+  }
+
+  .food-hero-dots {
+    display: none;
+  }
+}
