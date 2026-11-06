@@ -60,7 +60,7 @@ src/
   App.css
   index.css
 ```
-
+#live link:https://freshbite-taupe.vercel.app/
 ## Customizing the menu
 
 Menu names, descriptions, colors, and image paths are defined in `src/data/menuItems.js`. Update those entries to change the items shown in the hero carousel.
