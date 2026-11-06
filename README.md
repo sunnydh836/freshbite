@@ -1,16 +1,70 @@
-# React + Vite
+﻿# FreshBite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive fast food landing page built with React and Vite. FreshBite showcases a rotating menu of five favorites with animated product transitions, a full-screen hero, and a warm, colorful visual style.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Animated hero and loading screen
+- Five featured menu items with next, previous, and dot navigation
+- Smooth transitions powered by GSAP
+- Smooth scrolling powered by Lenis
+- Responsive layout for desktop and mobile
+- Local food imagery included in `public/`
 
-## React Compiler
+## Tech stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Vite 7
+- GSAP
+- Framer Motion
+- Lenis
 
-## Expanding the ESLint configuration
+## Getting started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Requirements
+
+- Node.js 20.19+ or 22.12+
+- npm
+
+### Install and run
+
+```bash
+git clone https://github.com/sunnydh836/freshbite.git
+cd freshbite
+npm install
+npm run dev
+```
+
+Vite prints the local development URL in the terminal (usually [http://localhost:5173](http://localhost:5173)).
+
+## Available commands
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the local development server |
+| `npm run build` | Build the production site in `dist/` |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Check the code with ESLint |
+
+## Project structure
+
+```text
+public/
+  img/                 # Food background images
+  transparent-img/     # Product images
+src/
+  components/          # Hero, preloader, and social icons
+  data/                # Menu item content
+  lib/                 # Lenis smooth-scroll hook
+  App.jsx
+  App.css
+  index.css
+```
+
+## Customizing the menu
+
+Menu names, descriptions, colors, and image paths are defined in `src/data/menuItems.js`. Update those entries to change the items shown in the hero carousel.
+
+## License
+
+No license has been specified for this project. Contact the repository owner before reusing its code or assets.
